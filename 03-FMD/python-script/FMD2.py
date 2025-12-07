@@ -8,6 +8,7 @@ def FMD(fs, x, FilterSize, CutNum, ModeNum, MaxIterNum):
     freq_bound = np.arange(0, 1, 1/CutNum)
     temp_filters = np.zeros((FilterSize, CutNum))
     
+    
     for n in range(len(freq_bound)):
         # 逻辑上按下面注释的（13、14）这两行做，但是这里版本有问题，所以忽略，直接看17行
         # w = windows.hann(FilterSize)

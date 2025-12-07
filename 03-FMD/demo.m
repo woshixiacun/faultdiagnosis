@@ -23,19 +23,19 @@ clc; clear; close all;
 
 %%
 load x
-fs = 2e4;
+fs = 2e4; % 20000
 t = (0:length(x) - 1)' / fs;
 
-%%
-figure('Name', 'Time waveform of mixed signal')
-plot(t, x, 'b');
-xlabel('Time [s]');
-ylabel('Amplitude');
-
-figure('Name', 'FFT amplitude spectrum of mixed signal')
-[~, ~] = myfft(fs, x, 1);
-xlabel('Frequency [Hz]');
-ylabel('Amplitude');
+% %% 原始信号&傅里叶变换信号
+% figure('Name', 'Time waveform of mixed signal')
+% plot(t, x, 'b');
+% xlabel('Time [s]');
+% ylabel('Amplitude');
+% 
+% figure('Name', 'FFT amplitude spectrum of mixed signal')
+% [~, ~] = myfft(fs, x, 1);
+% xlabel('Frequency [Hz]');
+% ylabel('Amplitude');
 
 %% Parameters
 filtersize = 30;
